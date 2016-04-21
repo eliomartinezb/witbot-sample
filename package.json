@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eliomartinezb/witbot-sample.git"
+    "url": "git+https://github.com/mbrevoort/witbot-sample.git"
   },
   "author": "Mike Brevoort",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/eliomartinezb/witbot-sample/issues"
   },
-  "homepage": "https://github.com/eliomartinezb/witbot-sample#readme",
+  "homepage": "https://github.com/mbrevoort/witbot-sample#readme",
   "dependencies": {
     "botkit": "0.0.4",
     "request": "^2.67.0",
