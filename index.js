@@ -1,9 +1,9 @@
 var Botkit = require('botkit')
 var Witbot = require('witbot')
 
-var slackToken = process.env.xoxb-36765713364-IEIxmspAGV52mX5uxP4HeR4s
-var witToken = process.env.N7TEI4LXZSTXLBKXHCW4ZBUSCPFMLSH4
-var openWeatherApiKey = process.env.OPENWEATHER_KEY
+var slackToken = "xoxb-36765713364-IEIxmspAGV52mX5uxP4HeR4s"
+var witToken = "N7TEI4LXZSTXLBKXHCW4ZBUSCPFMLSH4"
+var openWeatherApiKey = "OPENWEATHER_KEY"
 
 var controller = Botkit.slackbot({
   debug: false
