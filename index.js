@@ -6,7 +6,7 @@ var witToken = "N7TEI4LXZSTXLBKXHCW4ZBUSCPFMLSH4"
 var openWeatherApiKey = "OPENWEATHER_KEY"
 
 var controller = Botkit.slackbot({
-  debug: true
+  debug: false
 })
 
 controller.spawn({
