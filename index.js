@@ -6,7 +6,7 @@ var witToken = "N7TEI4LXZSTXLBKXHCW4ZBUSCPFMLSH4"
 var openWeatherApiKey = "OPENWEATHER_KEY"
 
 var controller = Botkit.slackbot({
-  debug: false
+  debug: true
 })
 
 controller.spawn({
@@ -24,20 +24,29 @@ controller.hears('.*', 'direct_message,direct_mention', function (bot, message) 
   witbot.process(message.text, bot, message)
 })
 
+/*
 witbot.hears('hello', 0.5, function (bot, message, outcome) {
   bot.reply(message, 'Hello to you as well!')
 })
 
 var weather = require('./weather')(openWeatherApiKey)
 
-witbot.hears('weather', 0.5, function (bot, message, outcome) {
-  console.log(outcome.entities.location)
+*/
+
+witbot.hears('get_clima', 0.5, function (bot, message, outcome) {
+  console.log(outcome.entities.lugar)
+/*
   if (!outcome.entities.location || outcome.entities.location.length === 0) {
     bot.reply(message, 'I\'d love to give you the weather but for where?')
     return
   }
+*/
 
-  var location = outcome.entities.location[0].value
+  var location = outcome.entities.lugar[0].value
+  console.log(location)
+  msg = "hola"
+  bot.reply(message, msg)
+/*
   weather.get(location, function (error, msg) {
     if (error) {
       console.error(error)
@@ -46,4 +55,5 @@ witbot.hears('weather', 0.5, function (bot, message, outcome) {
     }
     bot.reply(message, msg)
   })
+*/
 })
