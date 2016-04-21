@@ -24,29 +24,34 @@ controller.hears('.*', 'direct_message,direct_mention', function (bot, message) 
   witbot.process(message.text, bot, message)
 })
 
-/*
-witbot.hears('hello', 0.5, function (bot, message, outcome) {
+
+witbot.hears('hola', 0.5, function (bot, message, outcome) {
   bot.reply(message, 'Hello to you as well!')
+  console.log("----HOLA------")
+  console.log(outcome)
+  console.log(bot)
+  console.log(message)
+  console.log("----------")
 })
 
 var weather = require('./weather')(openWeatherApiKey)
 
-*/
-
 witbot.hears('get_clima', 0.5, function (bot, message, outcome) {
-  console.log(outcome.entities.lugar)
-/*
+  console.log(outcome)
+  console.log(bot)
+  console.log(message)
+  bot.reply(message, 'Hello')
+  /*
+
   if (!outcome.entities.location || outcome.entities.location.length === 0) {
     bot.reply(message, 'I\'d love to give you the weather but for where?')
     return
   }
-*/
+
 
   var location = outcome.entities.lugar[0].value
-  console.log(location)
-  msg = "hola"
-  bot.reply(message, msg)
-/*
+
+
   weather.get(location, function (error, msg) {
     if (error) {
       console.error(error)
