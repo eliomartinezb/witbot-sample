@@ -36,7 +36,7 @@ witbot.hears('hola', 0.5, function (bot, message, outcome) {
 
 var weather = require('./weather')(openWeatherApiKey)
 
-witbot.hears('get_clima', 0.5, function (bot, message, outcome) {
+witbot.hears('default_intent', 0.5, function (bot, message, outcome) {
   console.log(outcome)
   console.log(bot)
   console.log(message)
